@@ -15,7 +15,8 @@ PA190290290=sprintf('C:\\Users\\Kyle\\Documents\\Personal\\NDT\\Nonlinear Progra
 
 PA190270190=sprintf('C:\\Users\\Kyle\\Documents\\Personal\\NDT\\Nonlinear Program\\TR two3 PA190270190\\Console1\\Console1\\1.txt');
 
-x=[1 250];y=[1 150];
+x=[1 250];
+y=[1 150];
 %[z]=load(PW1);image(x,y,z.^2*2e4);xlabel('x/mm');ylabel('y/mm');
 %[z]=load(PW2);image(x,y,z.^2*3e11);xlabel('x/mm');ylabel('y/mm');
 
@@ -33,7 +34,12 @@ x=[1 250];y=[1 150];
 %[z]=load(PA190290240);image(x,y,z.^2*2e15);xlabel('x/mm');ylabel('y/mm');
 %[z]=load(PA190290290);image(x,y,z.^2*6e15);xlabel('x/mm');ylabel('y/mm');
 
-[z1]=load(PA190290190);[z2]=load(PA190290290);[z]=[z1]+[z2];image(x,y,z.^2*4e15);xlabel('x/mm');ylabel('y/mm');
+[z1]=load(PA190290190);
+[z2]=load(PA190290290);
+[z]=[z1]+[z2];
+image(x,y,z.^2*4e15);
+xlabel('x/mm');
+ylabel('y/mm');
 
 %[z]=load(PA190270190);image(x,y,z.^2*2e17);xlabel('x/mm');ylabel('y/mm');
 
