@@ -34,7 +34,7 @@ module global_variables
 
 
        parameter (deltt=0.5e-7,deltd=0.5e-3)                         !离散时间间隔deltt，离散空间间隔deltd
-	   parameter  (r=1e-9,Q=200,r2=1e-3,r1=1e-2)                                       !非线性参数r,衰减相关系数Q
+	   parameter  (r=1e-9,Q=2,r2=1e-3,r1=2e-3)                                       !非线性参数r,衰减相关系数Q
 	   real pm,xx,yy(2),x_down,x_up,y_down,y_up,xstart,xend,ystart,yend                            !pm空间密度pm，积分变量xx，上下限yy
        parameter(Kh1=0.75e15,Kh2=1e15)                                          
 
@@ -151,8 +151,9 @@ program  main_simu
 	  s_Hnum=1
 	  
 	  f=250e3
+      !f=8500
 	  !f=4e3
-	  fL=4e3
+	  !fL=4e3
 	  !fL=8e3
 	  
       ht=2*4*Q/(deltt*f)
@@ -343,7 +344,7 @@ program  main_simu
                      Tyyf(m,n)=Tyyf(m,n)*exp(-pi*f*deltt/(2*Q))
 					Txyf(m,n)=Txyf(m,n)*exp(-pi*f*deltt/(2*Q))
 					 
-					 !K11(m,n)=K1*(1+bb*Txxf(m,n))                                 !经典非线性
+					 K11(m,n)=K1*(1+bb*Txxf(m,n))                                 !经典非线性
 					 end if
 				 end if
 
@@ -454,7 +455,8 @@ program  main_simu
 	   
 
      Tvf=(Txx(180,180)+Tyy(180,180))/sqrt(2.0)
-	 write(*,*) k,Kvf(180,180),Tvf,K_test1(180,180),riseflag(180,180),initial_state(180,180),Hnum(180,180)
+	 !write(*,*) k,Kvf(180,180),Tvf,K_test1(180,180),riseflag(180,180),initial_state(180,180),Hnum(180,180)
+     write(*,*) k/2e3,"% done"
         
 
 	  

@@ -45,7 +45,7 @@ module once
 		   endif
 		      hh=hh/2
 		      n=n*2
-		      t1=t2
+		      t2=t1
 		      m=m+1
 		 enddo
       once_jifen1=t2
@@ -82,7 +82,7 @@ module once
 		   endif
 		      hh=hh/2
 		      n=n*2
-		      t1=t2
+		      t2=t1
 		      m=m+1
 		 enddo
       once_jifen2=t2
@@ -122,7 +122,7 @@ module once
 		   endif
 		      hh=hh/2
 		      n=n*2
-		      t1=t2
+		      t2=t1
 		      m=m+1
 		 enddo
       once_jifen3=t2
@@ -162,7 +162,7 @@ module once
 		   endif
 		      hh=hh/2
 		      n=n*2
-		      t1=t2
+		      t2=t1
 		 enddo
       once_jifen4=t2
 	  
