@@ -47,7 +47,7 @@ eps  |   |
 ---
 ## twice：对once中的四个一次积分 按照定义再各积一次
 设$density()=f()$
-\[twice\_jifen1=\int\nolimits_{xstart}^{xend}\int\nolimits_{y-down}^x f() dx dy\]
+\[twice\_jifen1(xstart,xend,y\_down,sign)=\int\nolimits_{xstart}^{xend}\int\nolimits_{y-down}^x f() dx dy\]
 \[twice\_jifen2=\int\nolimits_{xstart}^{xend}\int\nolimits_x^{y-up} f() dx dy\]
 \[twice\_jifen3=\int\nolimits_{ystart}^{yend}\int\nolimits_{x-down}^y f() dx dy\]
 \[twice\_jifen4=\int\nolimits_{ystart}^{yend}\int\nolimits_y^{x-up} f() dx dy\]
@@ -67,12 +67,13 @@ s1,s2  |   |
 
 ---
 ## pm_reaction_rewrite
-1. 定义了子程序`pm_caculate`
+定义了子程序`pm_caculate`
 
 程序中的字母|含义|计算位置
 --|--|--
 Khr_line  |应力-应变图的斜率   |  
 Kh1,Kh2  |开时的模量，关时的模量   |  
+riseflag(m,n)  |T：该单元的应力增长   |  
 ---
 ## pmsimu
 问题：
